@@ -9,14 +9,10 @@ type Queue struct {
     head *Node
 }
 
-func New() *Queue {
-    q := new(Queue)
-    return q
-}
-
-func (q *Queue) Append(newNode *Node) {
+func (q *Queue) Append(input string) {
+    newNode *Node := {data: input}
     if q.head == nil {
-        q.head = newNode
+        q.head = &Node
         return
     }
 
@@ -34,4 +30,9 @@ func (q *Queue) Pull() string {
     data := q.head.data
     q.head = q.head.next
     return data
+}
+
+func (q *Queue) Size() int {
+    size := len(q)
+    return size
 }
