@@ -11,7 +11,7 @@ type Queue struct {
 
 func New() *Queue {
     q := Queue{}
-    return q
+    return &q
  }
 
 func (q *Queue) Append(input string) {
