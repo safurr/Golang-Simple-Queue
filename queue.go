@@ -10,7 +10,7 @@ type Queue struct {
 }
 
 func New() *Queue {
-    return new(Queue)
+    return New(Queue)
 }
 
 func (q *Queue) Append(newNode *Node) {
