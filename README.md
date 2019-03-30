@@ -36,11 +36,6 @@ import (
 	"fmt"
 )
 
-type Node struct {
-    data string
-    next *Node
-}
-
 func main() {
 	queue := queue.New()
 	item := `{id:1, message: "Thing to work on"}`
