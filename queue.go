@@ -10,7 +10,7 @@ type Queue struct {
 }
 
 func New() *Queue {
-    q := new(&Queue{})
+    q := Queue{}
     return q
  }
 
