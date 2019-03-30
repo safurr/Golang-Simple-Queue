@@ -9,6 +9,11 @@ type Queue struct {
     head *Node
 }
 
+func New() *Queue {
+    q := new(Queue)
+    return q
+ }
+
 func (q *Queue) Append(input string) {
     newNode := &Node{data: input}
     if q.head == nil {
