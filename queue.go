@@ -10,7 +10,7 @@ type Queue struct {
 }
 
 func (q *Queue) Append(input string) {
-    newNode *Node := {data: input}
+    newNode := &Node{data: input}
     if q.head == nil {
         q.head = &Node
         return
