@@ -12,7 +12,7 @@ type Queue struct {
 func (q *Queue) Append(input string) {
     newNode := &Node{data: input}
     if q.head == nil {
-        q.head = &Node
+        q.head = newNode
         return
     }
 
@@ -32,7 +32,10 @@ func (q *Queue) Pull() string {
     return data
 }
 
-func (q *Queue) Size() int {
-    size := len(q)
-    return size
+func (q *Queue) Empty() bool {
+    if q.head == nil {
+        return true
+    } else {
+        return false
+    }
 }
