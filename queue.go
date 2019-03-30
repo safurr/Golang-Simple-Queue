@@ -9,6 +9,10 @@ type Queue struct {
     head *Node
 }
 
+func New() *Queue {
+    return new(Queue)
+}
+
 func (q *Queue) Append(newNode *Node) {
     if q.head == nil {
         q.head = newNode
